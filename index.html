@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Rainha ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #17000a, #4b0018, #8b0030);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .coracoes span {
+            position: fixed;
+            bottom: -50px;
+            font-size: 25px;
+            animation: subir 7s linear infinite;
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        .coracoes span:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .coracoes span:nth-child(2) { left: 25%; animation-delay: 2s; }
+        .coracoes span:nth-child(3) { left: 45%; animation-delay: 4s; }
+        .coracoes span:nth-child(4) { left: 65%; animation-delay: 1s; }
+        .coracoes span:nth-child(5) { left: 85%; animation-delay: 3s; }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.5);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .titulo {
+            font-size: 48px;
+            margin-top: 30px;
+            color: #ffd6e5;
+            text-shadow: 0 0 20px #ff4f91;
+        }
+
+        .subtitulo {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ffc1d8;
+        }
+
+        .coracao-principal {
+            font-size: 80px;
+            margin: 25px 0;
+            animation: pulsar 1.5s infinite;
+        }
+
+        @keyframes pulsar {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.18);
+            }
+        }
+
+        .carta {
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 35px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+            text-align: left;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .destaque {
+            color: #ff9fc2;
+            font-weight: bold;
+        }
+
+        .futuro {
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 25px;
+            background: rgba(255, 0, 90, 0.15);
+            border: 1px solid rgba(255,150,190,0.3);
+        }
+
+        .futuro h2 {
+            color: #ffd1e1;
+            margin-bottom: 15px;
+        }
+
+        .frase-final {
+            margin-top: 40px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 15px #ff4f91;
+        }
+
+        .assinatura {
+            margin-top: 20px;
+            color: #ffc1d8;
+            font-size: 18px;
+        }
+
+        .botao {
+            margin-top: 30px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #ff4f91;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255,79,145,0.5);
+        }
+
+        .botao:hover {
+            transform: scale(1.05);
+        }
+
+        #mensagem {
+            margin-top: 20px;
+            display: none;
+            color: #ffd1e1;
+            font-size: 19px;
+        }
+
+        @media (max-width: 600px) {
+            .titulo {
+                font-size: 36px;
+            }
+
+            .carta {
+                padding: 25px;
+                font-size: 16px;
+            }
+
+            .frase-final {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="coracoes">
+        <span>❤️</span>
+        <span>💗</span>
+        <span>💕</span>
+        <span>❤️</span>
+        <span>💖</span>
+    </div>
+
+    <div class="container">
+
+        <h1 class="titulo">Para Minha Rainha 👑</h1>
+
+        <p class="subtitulo">
+            Uma pequena declaração para uma pessoa muito especial ❤️
+        </p>
+
+        <div class="coracao-principal">
+            ❤️
+        </div>
+
+        <div class="carta">
+
+            <p>
+                <span class="destaque">Sofia,</span>
+            </p>
+
+            <p>
+                Eu queria deixar registrado aqui o quanto você é especial
+                para mim. ❤️
+            </p>
+
+            <p>
+                Quando eu te conheci, eu nunca imaginaria que, com o tempo,
+                você se tornaria uma pessoa tão importante na minha vida.
+                Hoje eu gosto muito de você e tenho um carinho enorme por tudo
+                que vivemos e por todos os momentos que ainda podemos viver.
+            </p>
+
+            <p>
+                Às vezes eu fico imaginando como seria o nosso futuro quando
+                estivermos mais velhos: nós dois crescendo, realizando nossos
+                sonhos e construindo nossas próprias histórias.
+            </p>
+
+            <p>
+                E quem sabe um dia, se a vida levar a gente pelo mesmo caminho,
+                poder olhar para trás e lembrar de quando tudo começou.
+            </p>
+
+            <p>
+                Quero que você saiba que você tem um lugar muito especial
+                no meu coração e que eu desejo que você seja muito feliz,
+                comigo ou seguindo o caminho que a vida preparar.
+            </p>
+
+        </div>
+
+        <div class="futuro">
+
+            <h2>✨ Imaginando o futuro ✨</h2>
+
+            <p>
+                Agora imagina nós dois no futuro, já crescidos, lembrando
+                de todas as histórias que vivemos desde quando éramos mais
+                novos.
+            </p>
+
+            <p style="margin-top:15px;">
+                Uma casa, muitos momentos especiais, nossos sonhos realizados
+                e uma vida cheia de lembranças boas. ❤️
+            </p>
+
+        </div>
+
+        <button class="botao" onclick="mostrarMensagem()">
+            Clique aqui ❤️
+        </button>
+
+        <div id="mensagem">
+            Sofia, você é uma pessoa muito especial. Nunca esqueça disso. 💗
+        </div>
+
+        <div class="frase-final">
+            TE AMO, AMORR ❤️
+        </div>
+
+        <div class="assinatura">
+            Feito com carinho especialmente para Sofia 👑
+        </div>
+
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            const mensagem = document.getElementById("mensagem");
+
+            if (mensagem.style.display === "block") {
+                mensagem.style.display = "none";
+            } else {
+                mensagem.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
