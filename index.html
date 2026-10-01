@@ -20,6 +20,7 @@
             overflow-x: hidden;
         }
 
+        /* CORAÇÕES */
         .coracoes span {
             position: fixed;
             bottom: -50px;
@@ -29,21 +30,42 @@
             z-index: 0;
         }
 
-        .coracoes span:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .coracoes span:nth-child(2) { left: 25%; animation-delay: 2s; }
-        .coracoes span:nth-child(3) { left: 45%; animation-delay: 4s; }
-        .coracoes span:nth-child(4) { left: 65%; animation-delay: 1s; }
-        .coracoes span:nth-child(5) { left: 85%; animation-delay: 3s; }
+        .coracoes span:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .coracoes span:nth-child(2) {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .coracoes span:nth-child(3) {
+            left: 45%;
+            animation-delay: 4s;
+        }
+
+        .coracoes span:nth-child(4) {
+            left: 65%;
+            animation-delay: 1s;
+        }
+
+        .coracoes span:nth-child(5) {
+            left: 85%;
+            animation-delay: 3s;
+        }
 
         @keyframes subir {
             0% {
                 transform: translateY(0) scale(1);
             }
+
             100% {
                 transform: translateY(-110vh) scale(1.5);
             }
         }
 
+        /* CONTEÚDO */
         .container {
             position: relative;
             z-index: 1;
@@ -76,19 +98,119 @@
             0%, 100% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.18);
             }
         }
 
+        /* PLAYER */
+        .player {
+            margin: 30px auto;
+            max-width: 500px;
+            padding: 22px;
+            border-radius: 25px;
+
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.35),
+                0 0 25px rgba(255, 79, 145, 0.25);
+        }
+
+        .musica-titulo {
+            font-size: 18px;
+            color: #ffd6e5;
+            margin-bottom: 15px;
+        }
+
+        .disco {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle,
+                #ffd1e1 0 8%,
+                #ff4f91 9% 22%,
+                #3a0013 23% 30%,
+                #ff4f91 31% 45%,
+                #3a0013 46% 100%);
+
+            box-shadow: 0 0 20px rgba(255, 79, 145, 0.5);
+        }
+
+        .tocando .disco {
+            animation: girar 3s linear infinite;
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .controles {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .play-btn {
+            width: 55px;
+            height: 55px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #ff4f91;
+            color: white;
+
+            font-size: 22px;
+            cursor: pointer;
+
+            box-shadow: 0 0 20px rgba(255, 79, 145, 0.5);
+
+            transition: 0.2s;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .volume {
+            width: 130px;
+            accent-color: #ff4f91;
+            cursor: pointer;
+        }
+
+        .volume-icon {
+            font-size: 20px;
+        }
+
+        /* CARTA */
         .carta {
             background: rgba(255,255,255,0.10);
             border: 1px solid rgba(255,255,255,0.25);
+
             backdrop-filter: blur(10px);
+
             border-radius: 25px;
             padding: 35px;
             margin-top: 30px;
+
             box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+
             text-align: left;
             line-height: 1.8;
             font-size: 18px;
@@ -99,10 +221,12 @@
             font-weight: bold;
         }
 
+        /* FUTURO */
         .futuro {
             margin-top: 30px;
             padding: 30px;
             border-radius: 25px;
+
             background: rgba(255, 0, 90, 0.15);
             border: 1px solid rgba(255,150,190,0.3);
         }
@@ -112,29 +236,21 @@
             margin-bottom: 15px;
         }
 
-        .frase-final {
-            margin-top: 40px;
-            font-size: 32px;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 0 0 15px #ff4f91;
-        }
-
-        .assinatura {
-            margin-top: 20px;
-            color: #ffc1d8;
-            font-size: 18px;
-        }
-
+        /* BOTÃO */
         .botao {
             margin-top: 30px;
+
             padding: 14px 28px;
+
             border: none;
             border-radius: 30px;
+
             background: #ff4f91;
             color: white;
+
             font-size: 17px;
             cursor: pointer;
+
             box-shadow: 0 0 20px rgba(255,79,145,0.5);
         }
 
@@ -145,11 +261,32 @@
         #mensagem {
             margin-top: 20px;
             display: none;
+
             color: #ffd1e1;
             font-size: 19px;
         }
 
+        /* FINAL */
+        .frase-final {
+            margin-top: 40px;
+
+            font-size: 32px;
+            font-weight: bold;
+
+            color: #fff;
+
+            text-shadow: 0 0 15px #ff4f91;
+        }
+
+        .assinatura {
+            margin-top: 20px;
+
+            color: #ffc1d8;
+            font-size: 18px;
+        }
+
         @media (max-width: 600px) {
+
             .titulo {
                 font-size: 36px;
             }
@@ -162,12 +299,17 @@
             .frase-final {
                 font-size: 26px;
             }
+
+            .volume {
+                width: 100px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- CORAÇÕES -->
     <div class="coracoes">
         <span>❤️</span>
         <span>💗</span>
@@ -176,9 +318,12 @@
         <span>💖</span>
     </div>
 
+
     <div class="container">
 
-        <h1 class="titulo">Para Minha Rainha 👑</h1>
+        <h1 class="titulo">
+            Para Minha Rainha 👑
+        </h1>
 
         <p class="subtitulo">
             Uma pequena declaração para uma pessoa muito especial ❤️
@@ -188,10 +333,58 @@
             ❤️
         </div>
 
+
+        <!-- PLAYER DE MÚSICA -->
+
+        <div class="player" id="player">
+
+            <div class="musica-titulo">
+                🎵 Nossa música ❤️
+            </div>
+
+            <div class="disco"></div>
+
+            <div class="controles">
+
+                <span class="volume-icon">
+                    🔊
+                </span>
+
+                <input
+                    class="volume"
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.7"
+                    id="volume"
+                >
+
+                <button
+                    class="play-btn"
+                    id="playBtn"
+                    onclick="tocarMusica()">
+                    ▶
+                </button>
+
+            </div>
+
+            <audio id="musica" loop>
+                <source src="musica.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+
+        </div>
+
+
+        <!-- CARTA -->
+
         <div class="carta">
 
             <p>
-                <span class="destaque">Sofia,</span>
+                <span class="destaque">
+                    Sofia,
+                </span>
             </p>
 
             <p>
@@ -225,9 +418,14 @@
 
         </div>
 
+
+        <!-- FUTURO -->
+
         <div class="futuro">
 
-            <h2>✨ Imaginando o futuro ✨</h2>
+            <h2>
+                ✨ Imaginando o futuro ✨
+            </h2>
 
             <p>
                 Agora imagina nós dois no futuro, já crescidos, lembrando
@@ -242,34 +440,103 @@
 
         </div>
 
-        <button class="botao" onclick="mostrarMensagem()">
+
+        <!-- BOTÃO -->
+
+        <button
+            class="botao"
+            onclick="mostrarMensagem()">
+
             Clique aqui ❤️
+
         </button>
 
+
         <div id="mensagem">
-            Sofia, você é uma pessoa muito especial. Nunca esqueça disso. 💗
+
+            Sofia, você é uma pessoa muito especial.
+            Nunca esqueça disso. 💗
+
         </div>
+
 
         <div class="frase-final">
+
             TE AMO, AMORR ❤️
+
         </div>
 
+
         <div class="assinatura">
+
             Feito com carinho especialmente para Sofia 👑
+
         </div>
 
     </div>
 
+
     <script>
+
+        const musica = document.getElementById("musica");
+        const playBtn = document.getElementById("playBtn");
+        const volume = document.getElementById("volume");
+        const player = document.getElementById("player");
+
+
+        /* TOCAR / PAUSAR */
+
+        function tocarMusica() {
+
+            if (musica.paused) {
+
+                musica.play();
+
+                playBtn.innerHTML = "⏸";
+
+                player.classList.add("tocando");
+
+            } else {
+
+                musica.pause();
+
+                playBtn.innerHTML = "▶";
+
+                player.classList.remove("tocando");
+
+            }
+
+        }
+
+
+        /* VOLUME */
+
+        volume.addEventListener("input", function() {
+
+            musica.volume = this.value;
+
+        });
+
+
+        /* MENSAGEM */
+
         function mostrarMensagem() {
-            const mensagem = document.getElementById("mensagem");
+
+            const mensagem =
+                document.getElementById("mensagem");
 
             if (mensagem.style.display === "block") {
+
                 mensagem.style.display = "none";
+
             } else {
+
                 mensagem.style.display = "block";
+
             }
+
         }
+
     </script>
 
 </body>
