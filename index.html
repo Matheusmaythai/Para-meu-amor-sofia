@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Para Minha Rainha 👑❤️</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +20,15 @@
             font-family: Arial, sans-serif;
             color: white;
             text-align: center;
-            background: linear-gradient(135deg, #25000d, #8b0035, #ff2f68);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #25000d,
+                    #8b0035,
+                    #ff2f68
+                );
+
             overflow-x: hidden;
         }
 
@@ -32,7 +42,10 @@
         h1 {
             font-size: 42px;
             margin-bottom: 25px;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+
+            text-shadow:
+                0 0 10px rgba(255,255,255,0.5),
+                0 0 25px rgba(255,50,100,0.8);
         }
 
         h2 {
@@ -46,175 +59,325 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255,255,255,0.12);
+
+            border: 1px solid rgba(255,255,255,0.2);
+
             border-radius: 25px;
+
             padding: 30px;
+
             margin: 25px 0;
+
             backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.25);
         }
 
+
+        /* FOTO */
+
+        .foto-amor {
+            width: 100%;
+            max-width: 400px;
+
+            border-radius: 25px;
+
+            margin: 20px auto;
+
+            display: block;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.5);
+
+            border: 3px solid rgba(255,255,255,0.5);
+        }
+
+
+        /* SPOTIFY */
+
         .spotify {
-            margin-top: 25px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
         .spotify iframe {
             width: 100%;
-            border-radius: 15px;
+
             border: none;
+
+            border-radius: 15px;
         }
+
+
+        /* BOTÃO */
 
         button {
             border: none;
+
             padding: 15px 25px;
+
             border-radius: 30px;
+
             background: white;
+
             color: #b00045;
+
             font-size: 17px;
+
             font-weight: bold;
+
             cursor: pointer;
+
             transition: 0.3s;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.3);
         }
 
         button:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
+
+
+        /* MENSAGEM */
 
         #mensagem {
             display: none;
+
             margin-top: 25px;
-            font-size: 22px;
+
+            font-size: 24px;
+
             font-weight: bold;
+
+            animation: aparecer 1s ease;
         }
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* CORAÇÕES */
 
         .heart {
             position: fixed;
-            bottom: -20px;
+
+            bottom: -30px;
+
             font-size: 25px;
-            animation: subir 6s linear infinite;
+
+            animation:
+                subir 6s linear forwards;
+
             pointer-events: none;
+
+            z-index: 999;
         }
 
         @keyframes subir {
+
             0% {
-                transform: translateY(0);
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
                 opacity: 1;
             }
 
             100% {
-                transform: translateY(-110vh);
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
                 opacity: 0;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
     <div class="container">
 
-        <h1>Para Minha Rainha 👑❤️</h1>
+
+        <!-- TÍTULO -->
+
+        <h1>
+            Para Minha Rainha 👑❤️
+        </h1>
+
+
+        <!-- DECLARAÇÃO -->
 
         <div class="card">
 
-            <h2>Sofia ❤️</h2>
+            <h2>
+                Sofia ❤️
+            </h2>
+
+
+            <!-- FOTO -->
+
+            <img
+                src="sofia.jpg"
+                alt="❤️"
+                class="foto-amor"
+            >
+
 
             <p>
                 Você é uma pessoa muito especial para mim.
-                Desde que você entrou na minha vida, muitos momentos
-                ficaram mais especiais.
+                Desde que você entrou na minha vida,
+                muitos momentos ficaram mais especiais.
             </p>
 
-            <p>
-                Eu quero continuar criando memórias ao seu lado,
-                sorrindo, conversando e vivendo vários momentos
-                juntos.
-            </p>
+
+            <!-- MÚSICA -->
+
+            <div class="spotify">
+
+                <h2>
+                    🎵 Nossa música ❤️
+                </h2>
+
+                <iframe
+                    src="https://open.spotify.com/embed/track/68eBEUfmUZ3GKC4w1xkOWP?utm_source=generator"
+                    height="152"
+
+                    allow="
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        fullscreen;
+                        picture-in-picture
+                    "
+
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
 
             <p>
-                Espero que esse pequeno site consiga mostrar
-                pelo menos um pouco do carinho que eu sinto por você.
+                Eu quero continuar criando memórias
+                ao seu lado, sorrindo, conversando
+                e vivendo vários momentos juntos.
+            </p>
+
+
+            <p>
+                Espero que esse pequeno site consiga
+                mostrar pelo menos um pouco do carinho
+                que eu sinto por você. ❤️
             </p>
 
         </div>
 
-
-        <!-- MÚSICA DO SPOTIFY -->
-
-        <div class="card spotify">
-
-            <h2>🎵 Nossa música ❤️</h2>
-
-            <iframe
-                src="https://open.spotify.com/embed/track/68eBEUfmUZ3GKC4w1xkOWP?utm_source=generator"
-                height="152"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-            </iframe>
-
-        </div>
 
 
         <!-- FUTURO -->
 
         <div class="card">
 
-            <h2>💍 Nosso futuro</h2>
+            <h2>
+                💍 Nosso futuro
+            </h2>
 
             <p>
                 Que ainda venham muitos momentos,
-                muitas risadas e muitas histórias para contar.
+                muitas risadas e muitas histórias
+                para contar.
             </p>
 
             <p>
-                E que a gente possa olhar para trás um dia
-                e lembrar de tudo que vivemos juntos. ❤️
+                E que a gente possa olhar para trás
+                um dia e lembrar de tudo que vivemos juntos. ❤️
             </p>
 
         </div>
+
 
 
         <!-- BOTÃO -->
 
         <button onclick="mostrarMensagem()">
+
             Clique aqui ❤️
+
         </button>
 
+
         <div id="mensagem">
+
             TE AMO, AMORR ❤️👑
+
         </div>
+
 
     </div>
 
 
+
+    <!-- JAVASCRIPT -->
+
     <script>
+
+
+        /* BOTÃO */
 
         function mostrarMensagem() {
 
-            const mensagem = document.getElementById("mensagem");
+            const mensagem =
+                document.getElementById("mensagem");
 
             mensagem.style.display = "block";
 
         }
 
 
-        // Corações aparecendo na tela
+
+        /* CORAÇÕES */
 
         function criarCoracao() {
 
-            const heart = document.createElement("div");
+            const heart =
+                document.createElement("div");
 
             heart.classList.add("heart");
 
             heart.innerHTML = "❤️";
 
-            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.fontSize =
+                (Math.random() * 20 + 15) + "px";
+
 
             heart.style.animationDuration =
                 (Math.random() * 3 + 4) + "s";
 
+
             document.body.appendChild(heart);
+
 
             setTimeout(() => {
 
@@ -224,9 +387,12 @@
 
         }
 
+
         setInterval(criarCoracao, 500);
+
 
     </script>
 
 </body>
+
 </html>
