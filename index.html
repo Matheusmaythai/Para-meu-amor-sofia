@@ -8,7 +8,6 @@
     <title>Para Minha Rainha 👑❤️</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -22,46 +21,54 @@
             text-align: center;
 
             background:
-                linear-gradient(
-                    135deg,
-                    #25000d,
-                    #8b0035,
-                    #ff2f68
-                );
+                radial-gradient(circle at top, #ff5c8a, transparent 40%),
+                linear-gradient(135deg, #25000d, #72002d, #ff174f);
 
             overflow-x: hidden;
         }
 
         .container {
             width: 90%;
-            max-width: 700px;
+            max-width: 750px;
             margin: auto;
             padding: 50px 20px;
         }
 
         h1 {
-            font-size: 42px;
-            margin-bottom: 25px;
+            font-size: 45px;
+            margin-bottom: 10px;
 
             text-shadow:
-                0 0 10px rgba(255,255,255,0.5),
-                0 0 25px rgba(255,50,100,0.8);
+                0 0 10px white,
+                0 0 25px #ff8fab;
         }
 
-        h2 {
-            margin-bottom: 15px;
-        }
-
-        p {
+        .subtitulo {
             font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .coracao-grande {
+            font-size: 65px;
+            margin: 20px;
+            animation: pulsar 1.5s infinite;
+        }
+
+        @keyframes pulsar {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
         }
 
         .card {
             background: rgba(255,255,255,0.12);
 
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.25);
 
             border-radius: 25px;
 
@@ -69,278 +76,255 @@
 
             margin: 25px 0;
 
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
 
             box-shadow:
-                0 10px 30px rgba(0,0,0,0.25);
+                0 15px 40px rgba(0,0,0,0.3);
         }
 
-
-        /* FOTO */
-
-        .foto-amor {
-            width: 100%;
-            max-width: 400px;
-
-            border-radius: 25px;
-
-            margin: 20px auto;
-
-            display: block;
-
-            box-shadow:
-                0 10px 35px rgba(0,0,0,0.5);
-
-            border: 3px solid rgba(255,255,255,0.5);
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
         }
 
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
 
-        /* SPOTIFY */
+        .destaque {
+            font-size: 24px;
+            font-weight: bold;
+
+            text-shadow:
+                0 0 15px #ffb6c9;
+        }
 
         .spotify {
             margin-top: 30px;
-            margin-bottom: 30px;
         }
 
         .spotify iframe {
             width: 100%;
-
             border: none;
-
             border-radius: 15px;
+            margin-top: 10px;
         }
 
-
-        /* BOTÃO */
-
         button {
+            margin-top: 20px;
+
+            padding: 16px 30px;
+
             border: none;
-
-            padding: 15px 25px;
-
             border-radius: 30px;
 
             background: white;
+            color: #c00045;
 
-            color: #b00045;
-
-            font-size: 17px;
-
+            font-size: 18px;
             font-weight: bold;
 
             cursor: pointer;
 
-            transition: 0.3s;
-
             box-shadow:
                 0 5px 20px rgba(0,0,0,0.3);
+
+            transition: 0.3s;
         }
 
         button:hover {
             transform: scale(1.08);
         }
 
-
-        /* MENSAGEM */
-
         #mensagem {
             display: none;
 
-            margin-top: 25px;
+            margin-top: 30px;
 
-            font-size: 24px;
-
+            font-size: 30px;
             font-weight: bold;
 
             animation: aparecer 1s ease;
         }
 
         @keyframes aparecer {
-
             from {
                 opacity: 0;
-                transform: scale(0.7);
+                transform: scale(0.5);
             }
 
             to {
                 opacity: 1;
                 transform: scale(1);
             }
-
         }
-
-
-        /* CORAÇÕES */
 
         .heart {
             position: fixed;
-
             bottom: -30px;
 
             font-size: 25px;
 
-            animation:
-                subir 6s linear forwards;
-
             pointer-events: none;
 
-            z-index: 999;
+            animation: subir linear forwards;
         }
 
         @keyframes subir {
-
             0% {
-                transform:
-                    translateY(0)
-                    rotate(0deg);
-
+                transform: translateY(0) rotate(0deg);
                 opacity: 1;
             }
 
             100% {
-                transform:
-                    translateY(-110vh)
-                    rotate(360deg);
-
+                transform: translateY(-110vh) rotate(360deg);
                 opacity: 0;
             }
-
         }
 
+        .assinatura {
+            margin-top: 40px;
+            font-size: 16px;
+            opacity: 0.8;
+        }
     </style>
-
 </head>
-
 
 <body>
 
     <div class="container">
 
+        <h1>Para Minha Rainha 👑❤️</h1>
 
-        <!-- TÍTULO -->
+        <div class="subtitulo">
+            Uma pequena surpresa para uma pessoa muito especial...
+        </div>
 
-        <h1>
-            Para Minha Rainha 👑❤️
-        </h1>
+        <div class="coracao-grande">
+            ❤️
+        </div>
 
 
-        <!-- DECLARAÇÃO -->
+        <!-- MEU TEXTO -->
 
         <div class="card">
 
-            <h2>
-                Sofia ❤️
-            </h2>
-
-
-            <!-- FOTO -->
-
-            <img
-                src="sofia.jpg"
-                alt="❤️"
-                class="foto-amor"
-            >
-
+            <h2>Sofia ❤️</h2>
 
             <p>
-                Você é uma pessoa muito especial para mim.
-                Desde que você entrou na minha vida,
-                muitos momentos ficaram mais especiais.
+                Sofia, eu te amo. Te amo muito.
+                Meu sonho é quando a gente crescer,
+                quero casar contigo.
             </p>
 
+            <p>
+                Mas vai imaginar... na minha primeira vez
+                em que te conheci, eu te olhei e nem te
+                achava bonita.
+            </p>
 
-            <!-- MÚSICA -->
+            <p>
+                E sabe... hoje em dia eu gosto de você
+                como ninguém. Você se tornou uma pessoa
+                muito especial para mim.
+            </p>
+
+            <p>
+                E se algum dia terminar e nunca mais,
+                nunca vou conseguir me recuperar...
+                porque Sofia, eu te amo.
+            </p>
+
+        </div>
+
+
+        <!-- MÚSICA -->
+
+        <div class="card">
+
+            <h2>🎵 Nossa música ❤️</h2>
+
+            <p>
+                Essa música vai ficar como parte
+                dessa lembrança. ❤️
+            </p>
 
             <div class="spotify">
-
-                <h2>
-                    🎵 Nossa música ❤️
-                </h2>
 
                 <iframe
                     src="https://open.spotify.com/embed/track/68eBEUfmUZ3GKC4w1xkOWP?utm_source=generator"
                     height="152"
-
-                    allow="
-                        autoplay;
-                        clipboard-write;
-                        encrypted-media;
-                        fullscreen;
-                        picture-in-picture
-                    "
-
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy">
                 </iframe>
 
             </div>
 
-
-            <p>
-                Eu quero continuar criando memórias
-                ao seu lado, sorrindo, conversando
-                e vivendo vários momentos juntos.
-            </p>
-
-
-            <p>
-                Espero que esse pequeno site consiga
-                mostrar pelo menos um pouco do carinho
-                que eu sinto por você. ❤️
-            </p>
-
         </div>
-
 
 
         <!-- FUTURO -->
 
         <div class="card">
 
-            <h2>
-                💍 Nosso futuro
-            </h2>
+            <h2>🏡 Nosso futuro ❤️</h2>
 
             <p>
-                Que ainda venham muitos momentos,
-                muitas risadas e muitas histórias
-                para contar.
+                E agora no futuro... imagina a gente
+                morando juntos.
             </p>
 
             <p>
-                E que a gente possa olhar para trás
-                um dia e lembrar de tudo que vivemos juntos. ❤️
+                Com os nossos filhos, construindo nossa
+                própria família e vivendo vários momentos
+                juntos.
+            </p>
+
+            <p>
+                Uma mini Sofia ia ser linda,
+                igual ao amor da minha vida. ❤️
+            </p>
+
+            <p>
+                Imagina a gente olhando para trás,
+                lembrando de quando tudo começou e
+                vendo tudo que conseguimos viver juntos.
+            </p>
+
+            <p>
+                Quero que ainda venham muitas risadas,
+                conversas, momentos e histórias para
+                guardar para sempre.
+            </p>
+
+            <p class="destaque">
+                Mas lembra... eu nunca vou te largar,
+                tá bom? ❤️👑
             </p>
 
         </div>
 
 
-
-        <!-- BOTÃO -->
+        <!-- FINAL -->
 
         <button onclick="mostrarMensagem()">
-
             Clique aqui ❤️
-
         </button>
 
-
         <div id="mensagem">
-
             TE AMO, AMORR ❤️👑
-
         </div>
 
+        <div class="assinatura">
+            Feito com carinho para Sofia ❤️
+        </div>
 
     </div>
 
 
-
-    <!-- JAVASCRIPT -->
-
     <script>
-
-
-        /* BOTÃO */
 
         function mostrarMensagem() {
 
@@ -349,11 +333,11 @@
 
             mensagem.style.display = "block";
 
+            for (let i = 0; i < 20; i++) {
+                criarCoracao();
+            }
         }
 
-
-
-        /* CORAÇÕES */
 
         function criarCoracao() {
 
@@ -362,34 +346,38 @@
 
             heart.classList.add("heart");
 
-            heart.innerHTML = "❤️";
+            const coracoes = [
+                "❤️",
+                "💖",
+                "💕",
+                "💗",
+                "💓",
+                "💘"
+            ];
+
+            heart.innerHTML =
+                coracoes[
+                    Math.floor(Math.random() * coracoes.length)
+                ];
 
             heart.style.left =
                 Math.random() * 100 + "vw";
 
-
             heart.style.fontSize =
                 (Math.random() * 20 + 15) + "px";
-
 
             heart.style.animationDuration =
                 (Math.random() * 3 + 4) + "s";
 
-
             document.body.appendChild(heart);
 
-
             setTimeout(() => {
-
                 heart.remove();
-
             }, 7000);
-
         }
 
 
-        setInterval(criarCoracao, 500);
-
+        setInterval(criarCoracao, 600);
 
     </script>
 
